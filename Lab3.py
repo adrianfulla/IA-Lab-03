@@ -29,7 +29,7 @@ def plot_distribution(probabilities, title='Probability Distribution'):
     plt.show()
 
 
-position = (5, 5)  
+position = (1, 5)  
 color = 'R'         
 updated_probabilities = update_probabilities(prior, position, color)
 
@@ -37,4 +37,4 @@ plot_distribution(updated_probabilities, 'Distribución de probabilidades')
 
 
 localizacion_mas_probable = np.unravel_index(np.argmax(updated_probabilities), updated_probabilities.shape)
-print("La celda más probable donde se encuentra el fantasma es:", most_probable_location)
+print("La celda más probable donde se encuentra el fantasma es:", localizacion_mas_probable)
